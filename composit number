@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	static boolean isComposite(int n){
+	    if(n<0){
+	        return false;
+	    }
+	    if(n==1){
+	            System.out.println("neither composite nor prime");
+	    }
+	    if(n%2==0 || n%3==0){
+	    for(int i=2;i<=n;i++){
+	        for(int j=0;j<=i;j++){
+	            }
+	        }
+	        return true;
+	    }
+	    return false;
+	}
+	public static void main(String[]args){
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    if(isComposite(n)){
+	        System.out.println("1");
+	    }else{
+	        System.out.println("0");
+	    }
+	}
+}
