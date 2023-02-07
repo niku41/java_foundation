@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class ASCIIValueOfACharacter {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        //char ch=0;
+       // char.sc=next().charAt(0);
+        //int a= ch;
+       // System.out.println(ch+"="+a);
+    }
+}
