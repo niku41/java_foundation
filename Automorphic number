@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class AutomorphicNumber {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int l=(" "+n).length();
+        int square=n*n;
+        int end=square%(int)Math.pow(m,1);
+        if(n==end){
+            System.out.println("Automorphic number");
+        }else{
+            System.out.println("Not an automorphic number");
+        }
+    }
+}
+
