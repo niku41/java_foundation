@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class AdditionOfTwoMatrix {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        int a[][]=new int[n][m];
+        int b[][]=new int[x][y];
+        int c[][]=new int [n>x?n:x][m>y?m:y];
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=m;j++){
+                a[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<=x;i++) {
+            for (int j = 0; j <= y; j++) {
+                b[i][j] = sc.nextInt();
+            }
+        }
+        for(int i=0;i<=(n>x?n:x);i++){
+            for(int j=0;j<=(m>y?m:y);j++){
+                c[i][j]=a[i][j]-b[i][j];
+                System.out.print(c[i][j]);
+            }
+        }
+        System.out.println();
+    }
+}
