@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class SquareRootOfANumber {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        double m=sc.nextInt();
+        double sq=Math.sqrt(m);
+        System.out.println(sq);
+    }
+}
