@@ -1,11 +1,11 @@
-import java.util.Scanner;
+import java.util.Random;
 
 public class GenerateRandomNumber {
     public static void main(String[]args) {
-        Scanner sc = new Scanner(System.in);
-      //  int m = sc.nextInt();
-        int rand_num=sc.nextInt(10);
-        System.out.println(rand_num);
-
+        Random rand=new Random();
+        int rand_int=rand.nextInt(10);
+        System.out.println(rand_int);
+        double rand_dbl=rand.nextDouble();
+        System.out.println(rand_dbl);
     }
 }
