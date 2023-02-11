@@ -1,0 +1,17 @@
+import java.util.*;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+	    Scanner s=new Scanner(System.in);
+	    int num=s.nextInt();
+	    //System.out.println("%d * %d =%d\n");
+	    for(int i=2;i<num;i++){
+	        if(num%i==0){
+	       // System.out.println("%d * %d =%d\n");
+		System.out.print(i+" ");
+	
+    }
+}
+}
+}
