@@ -1,0 +1,11 @@
+public class TowerOfHanoi {
+    public static void towerOfHanoi(int disk,char source,char auxiliary,char destination){
+        if(disk==0){
+            return;
+        }
+        towerOfHanoi(disk-1,source,destination,auxiliary);
+        System.out.println(source+" "+destination);
+        towerOfHanoi(disk-1,auxiliary,source,destination);
+    }
+
+}
