@@ -1,0 +1,39 @@
+public class Student1 {
+    public String name;
+    private int rollNumber;
+    public void Student(String n) {
+        name = n;
+    }
+    public void Student(String n,int rn){
+        name=n;
+        rollNumber=rn;
+    }
+    public void setRollNumber(int rn){
+        if(rn<=0){
+            return;
+        }
+        rollNumber=rn;
+    }
+    public int getRollNumber(){
+        return rollNumber;
+    }
+    public void print(){
+        System.out.println(name+":"+rollNumber);
+    }
+}
+
+
+
+
+import java.util.Scanner;
+
+public class Student1Use {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        Student1 S1=new Student1();
+        S1.name="nikita";
+        S1.setRollNumber(123);
+        System.out.println(S1.name);
+        System.out.println(S1.getRollNumber());
+    }
+}
