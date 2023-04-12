@@ -1,0 +1,30 @@
+public class Student{
+    public String name;
+    private int rollNumber;
+    public void setRollNumber(int rn){
+        if(rn==0){
+            return;
+        }
+        rollNumber=rn;
+    }
+    public int getRollNumber(){
+        return rollNumber;
+    }
+}
+
+
+
+
+import java.util.*;
+public class StudentUse {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        Student S1=new Student();
+        System.out.println(S1.name);
+        System.out.println(S1.getRollNumber());
+        S1.name="Nikita";
+        S1.setRollNumber(145);
+        System.out.println(S1.name);
+        System.out.println(S1.getRollNumber());
+    }
+}
