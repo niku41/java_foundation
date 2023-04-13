@@ -1,0 +1,23 @@
+public class Student5 {
+    public String name;
+    final private int rollNumber;
+    double cgpa;
+    final static double CONVERSION=0.95;
+    static int numStudents;
+    public Student5(String name){
+        this.name=name;
+        this.rollNumber=numStudents;
+    }
+}
+
+
+
+import java.util.Scanner;
+//Static keyword
+public class Student5Use {
+    public static void main(String[]args) {
+        System.out.println(Student5.numStudents);
+        Student5 S1 = new Student5("nikita");
+        System.out.println(S1.numStudents);
+    }
+}
