@@ -1,0 +1,24 @@
+public class ComplexNumbers {
+    int real;
+    int imaginary;
+    ComplexNumbers(int real, int imaginary){
+        this.real=real;
+        this.imaginary=imaginary;
+    }
+    void plus(ComplexNumbers C){
+        int real=this.real+C.real;
+        int imaginary=this.imaginary+C.imaginary;
+        this.real=real;
+        this.imaginary=imaginary;
+    }
+    void multiply(ComplexNumbers C){
+        int real=(this.real*C.real)-(this.imaginary*C.imaginary);
+        int imaginary=(this.real*C.imaginary)-(this.imaginary*C.real);
+        this.real=real;
+        this.imaginary=imaginary;
+    }
+    void print(){
+        System.out.println(this.real+"+i"+this.imaginary);
+    }
+
+}
