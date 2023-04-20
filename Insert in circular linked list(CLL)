@@ -1,15 +1,15 @@
 package com.nikita;
 
 public class CLL {
-   /* private Node head;
+    private Node head;
     private Node tail;
     public CLL(){
         this.head=null;
         this.tail=null;
     }
     //INSERTION
-    public void insert(){
-        Node node=new Node(int val);
+    public void insert(int val){
+        Node node=new Node();
         if(head==null){
             head=node;
             tail=node;
@@ -29,6 +29,26 @@ public class CLL {
         }
         System.out.println();
     }
+    //DELETION
+    public void delete(int val){
+        Node node =head;
+        if(node==null){
+            return;
+        }
+        if(node.val==val){
+            head=head.next;
+            tail.next=head;
+            return;
+        }
+        do{
+            Node n=node.next;
+            if(n.val==val){
+                node.next=n.next;
+                break;
+            }
+            node=node.next;
+        }while(node!=head);
+    }
     //CONSTRUCTOR
     private class Node{
         int val;
@@ -36,8 +56,9 @@ public class CLL {
         Public Node(int val){
             this.val=val;
         }
-    }*/
+    }
 }
+
 
 
 
