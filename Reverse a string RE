@@ -1,0 +1,18 @@
+ublic class Recursion6 {
+    //reverse a string RE
+    public static void printRev(String str,int idx){
+        if(idx==0){
+            System.out.println(str.charAt(idx));
+            return;
+        }
+        System.out.println(str.charAt(idx));
+        printRev(str,idx-1);
+    }
+    /**
+     * @param args
+     */
+    public static void main(String[]args){
+        String str="abcd";
+        System.out.print(str.length()-1);
+    }
+}
