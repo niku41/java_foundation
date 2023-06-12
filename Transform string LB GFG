@@ -1,0 +1,53 @@
+//{ Driver Code Starts
+//Initial Template for Java
+
+import java.io.*;
+import java.util.*;
+class GfG
+{
+    public static void main(String args[])throws IOException
+        {
+            BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
+            int t = Integer.parseInt(br.readLine());
+            while(t-->0)
+                {
+                    String arr[] = br.readLine().split(" ");
+                    String A = arr[0];
+                    String B = arr[1];
+                    Solution obj = new Solution();
+                    System.out.println(obj.transform (A, B));
+                }
+        }
+}
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+class Solution
+{
+    int transform (String A, String B)
+    {
+        // code here
+        int count=0;
+        if(A.length()!=B.length()){
+        return -1;
+        }
+        char ch1[]=A.toCharArray();
+        char ch2[]=B.toCharArray();
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+        for(int i=0;i<ch1.length;i++){
+            if(ch1[i]!=ch2[i]){
+                return -1;
+            }
+        }
+        for(int i=A.length()-1,j=i;i>=0;i--,j--){
+            while(i>=0 && A.charAt(i)!=B.charAt(j)){
+                i--;
+                count++;
+            }
+        }
+        return count;
+    }
+}
