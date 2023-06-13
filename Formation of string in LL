@@ -1,0 +1,16 @@
+//formation of string in LL
+import java.util.LinkedList;
+
+class LL{
+
+    public static void main(String[]args){
+        LinkedList<String> list = new LinkedList<String>();
+
+       list.addFirst("a");
+       list.addLast("is");
+       System.out.println(list);
+
+       list.addLast("list");
+       System.out.println(list);
+    }
+}
