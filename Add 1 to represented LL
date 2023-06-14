@@ -1,0 +1,120 @@
+//{ Driver Code Starts
+import java.io.*;
+import java.util.*;
+class Node
+{
+    int data;
+    Node next;
+    
+    Node(int x)
+    {
+        data = x;
+        next = null;
+    }
+}
+class GfG
+{
+    public static void printList(Node node) 
+    { 
+        while (node != null)
+        { 
+            System.out.print(node.data);
+            node = node.next; 
+        }  
+        System.out.println();
+    } 
+    public static void main(String args[])throws IOException
+        {
+            Scanner sc = new Scanner(System.in);
+            int t = sc.nextInt();
+            while(t-->0)
+                {
+                    String s = sc.next();
+                    Node head = new Node( s.charAt(0) - '0' );
+                    Node tail = head;
+                    for(int i=1; i<s.length(); i++)
+                    {
+                        tail.next = new Node( s.charAt(i) - '0' );
+                        tail = tail.next;
+                    }
+                    Solution obj = new Solution();
+                    head = obj.addOne(head);
+                    printList(head); 
+                }
+        }
+}
+// } Driver Code Ends
+
+
+/*
+class Node{
+    int data;
+    Node next;
+    
+    Node(int x){
+        data = x;
+        next = null;
+    }
+} 
+*/
+
+class Solution
+{
+    public static Node addOne(Node head) 
+    { 
+        //code here.
+        if(head==null){//if ll is null
+            return null;
+        }
+        int sum=0;
+        int carry=0;
+         
+        Node pre=null;
+        Node curr=head;
+        Node post=null;
+        
+        while(curr!=null){
+            post=curr.next;
+            curr.next=pre;
+            pre=curr;
+            curr=post;
+        }
+        head=pre;
+        Node temp=head;
+        sum=temp.data+1;
+        if(sum>9){
+            temp.data=0;
+            carry=1;
+        }else{
+            temp.data=sum;
+        }
+            temp=temp.next;
+            while(temp!=null){
+               pre=temp;
+               sum=temp.data+carry;
+               if(sum>9){
+            temp.data=0;
+            carry=1;
+        }else{
+            temp.data=sum;
+            carry=0;
+        }
+        temp=temp.next;
+        sum=0;
+        
+            }
+        if(carry==1){
+            pre.data=10;
+        }pre=null;
+        curr=head;
+        post=null;
+        while(curr!=null){
+            post=curr.next;
+            curr.next=pre;
+            pre=curr;
+            curr=post;
+        }
+        head=pre;
+        return head;
+    }
+}
