@@ -1,0 +1,22 @@
+//iteration in hashmap 
+//case2
+//Using map entry
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Hashing3 {
+    public static void main(String[]args){
+        HashMap<String,Integer>map=new HashMap<>();
+
+        //insertion
+        map.put("India",120);
+        map.put("US",30);
+        map.put("China",130);
+
+        for(Map.Entry<String,Integer>e:map.entrySet()){
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        }
+    }
+}
