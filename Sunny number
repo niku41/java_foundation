@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SunnyNumber {
     public static boolean isSunnyNumber(int num) {
-        if (Math.sqrt(num + 1) % 1 == 0) {
+        if (Math.pow((int) Math.sqrt(num + 1), 2) == num + 1) {
             return true;
         } else {
             return false;
